@@ -1,3 +1,189 @@
+/**
+ * To manually rebuild this file run
+ * npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+**/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Open Sans", system-ui, sans-serif;
+    font-weight: 400;
+  }
+  header {
+    @apply tw-bg-gray-900;
+  }
+  nav {
+    @apply tw-container tw-flex tw-items-center tw-justify-between tw-flex-wrap tw-p-6;
+  }
+}
+
+@layer components {
+  /* Header */
+
+  /* .logo-text {
+    @apply tw-font-semibold tw-my-0 tw-tracking-tight tw-pl-2;
+  }
+  h1.logo-text {
+    @apply tw-text-xs;
+  }
+  h2.logo-text {
+    @apply tw-text-sm;
+  } */
+
+  #nav-items-ctn {
+    @apply tw-w-full tw-text-sm tw-mr-6 sm:tw-mr-0 lg:tw-ml-3 lg:tw-flex lg:tw-items-center lg:tw-w-auto;
+  }
+  .nav-item {
+    @apply tw-block lg:tw-ml-4 tw-no-underline tw-mt-4 tw-mr-4 lg:tw-inline-block lg:tw-mt-0 tw-text-teal-200 hover:tw-text-white;
+  }
+
+  /* General */
+  .page-container {
+    @apply tw-container tw-p-8;
+  }
+  .page-title {
+    @apply tw-text-gray-900 tw-font-extrabold tw-mb-8;
+  }
+  .insert-content-ctn {
+    @apply tw-flex tw-flex-col sm:tw-flex-row tw-mb-16 tw-justify-center;
+  }
+  .insert-content--form-group {
+    @apply tw-w-full sm:tw-w-2/5;
+  }
+  .insert-content--form-group:first-child {
+    @apply sm:tw-mr-8;
+  }
+
+  /* Inputs */
+  #input-search {
+    @apply tw-block tw-w-4/5 tw-bg-gray-700 tw-border tw-border-gray-600 tw-placeholder-gray-400 tw-text-white tw-rounded-lg tw-p-2 focus:tw-ring-teal-800 focus:tw-border-teal-800 focus-visible:tw-ring-teal-800 focus-visible:tw-border-teal-800;
+  }
+  .input--text-textarea {
+    @apply tw-block tw-w-full tw-bg-gray-700 tw-border tw-border-gray-600 tw-placeholder-gray-400 tw-text-white tw-rounded-lg tw-p-2 tw-mb-2 focus:tw-ring-blue-500 focus:tw-border-blue-500;
+  }
+
+  /* Buttons */
+  .btn-primary-search {
+    @apply tw-w-1/5 tw-rounded tw-bg-teal-600 tw-py-1 tw-px-4 tw-ml-3;
+  }
+  /* Backgrounds */
+  .bg-grad-purple {
+    @apply tw-bg-gradient-to-r tw-from-purple-700 tw-via-purple-800 tw-to-purple-700 tw-text-gray-300;
+  }
+  .bg-grad-orange-washed {
+    @apply tw-bg-gradient-to-r tw-from-slate-700 tw-via-orange-washed tw-to-slate-700;
+  }
+  .bg-grad-teal--hover {
+    @apply hover:tw-from-teal-700 hover:tw-via-teal-600 hover:tw-to-teal-700 hover:tw-text-gray-300 hover:tw-ease-linear hover:tw-transition-all hover:tw-duration-200;
+  }
+  .bg-grad-slate {
+    @apply tw-bg-gradient-to-r tw-from-slate-900 tw-via-slate-800 tw-to-slate-900;
+  }
+
+  /* Resources */
+  .resource-item {
+    @apply tw-w-full tw-container tw-flex tw-flex-col tw-mb-8 tw-pt-8 tw-pl-8 tw-pr-8;
+  }
+  .resource-item .resource-clickable-title,
+  .resource-searched-item .resource-clickable-title {
+    @apply tw-cursor-pointer hover:tw-text-slate-100;
+  }
+  .tags-container {
+    @apply tw-justify-between tw-w-full tw-my-2;
+  }
+  .resource-tag-item.bg-grad-purple {
+    @apply tw-rounded-lg tw-bg-gradient-to-r tw-mt-2 tw-mr-4 tw-mb-2 tw-py-1 tw-px-2 tw-text-sm sm:tw-text-base;
+  }
+  .resource-info-details-ctn {
+    @apply tw-flex tw-flex-row;
+  }
+  .list-info {
+    @apply tw-w-5/12 tw-mt-6 tw-pr-4 tw-pb-6 tw-mr-4;
+  }
+  .description-and-actions {
+    @apply tw-flex tw-flex-col tw-w-full tw-justify-between tw-items-end tw-pt-4 tw-pl-4 tw-ml-4;
+  }
+  .description-and-actions p {
+    @apply tw-w-full tw-self-start sm:tw-mt-12;
+  }
+
+  /* Resources Quick Info */
+  .resources-quick-info {
+    @apply tw-flex tw-flex-row tw-mb-4 tw-justify-between tw-w-full;
+  }
+  .resources-quick-info img {
+    @apply tw-w-[24px] tw-h-[24px];
+  }
+  .resources-quick-info span {
+    @apply tw-block tw-w-full tw-text-left tw-text-gray-300;
+  }
+  .resources-quick-info a {
+    @apply tw-block tw-w-full tw-text-left tw-text-teal-500 tw-no-underline tw-italic;
+  }
+
+  /* Resources Quick Actions */
+  .resources-quick-actions {
+    @apply tw-flex tw-w-2/4 tw-max-w-[246px] tw-justify-items-center tw-self-end tw-pt-4 tw-rounded-t-lg tw-bg-gradient-to-r tw-from-slate-400 tw-via-slate-500 tw-to-slate-400;
+  }
+  .resources-quick-actions:hover {
+    @apply tw-bg-gradient-to-r tw-from-teal-700 tw-via-teal-600 tw-to-teal-700;
+  }
+  .resources-quick-actions:hover img {
+    @apply hover:tw-invert;
+  }
+  .resources-quick-actions.tag-page {
+    @apply tw-rounded-b-lg;
+  }
+  .resource-quick-actions-item {
+    @apply tw-flex tw-flex-col tw-items-center tw-w-full tw-cursor-pointer tw-border-r tw-border-[#576e9f] tw-justify-between;
+  }
+  .resource-quick-actions-item:last-child {
+    @apply tw-border-none;
+  }
+
+  /* Pages specific display of Resources */
+  .tag-page .resource-info-details-ctn {
+    @apply tw-flex-col;
+  }
+  .tag-page .list-info {
+    @apply tw-w-full tw-mx-0 tw-mt-2 tw-p-0;
+  }
+  .tag-page .description-and-actions {
+    @apply tw-m-0 tw-p-0;
+  }
+  .tag-page .description-and-actions p {
+    @apply tw-w-full lg:tw-w-2/4 tw-mt-2 tw-mb-3;
+  }
+
+  .single-resource-page .page-container {
+    @apply tw-bg-slate-900/50 tw-min-h-screen;
+  }
+  .single-resource-page .resources-quick-actions {
+    @apply tw-rounded-lg;
+  }
+  .single-resource-ctn {
+    @apply tw-w-full tw-mb-8 tw-text-slate-300;
+  }
+  .single-resource-ctn.single-card {
+    @apply tw-rounded-lg;
+  }
+
+  #homepage .resources-ctn {
+    @apply tw-flex tw-flex-col sm:tw-flex-row tw-justify-between;
+  }
+  #homepage .single-resource-ctn {
+    @apply sm:tw-w-2/4 tw-w-full tw-flex;
+  }
+  #homepage .last-added .last-added-title {
+    @apply tw-font-medium tw-text-3xl tw-my-6;
+  }
+  #homepage .single-resource-ctn:nth-child(1) {
+    @apply tw-mr-8;
+  }
+
+  .resource-searched-item {
+    @apply tw-w-full tw-flex tw-flex-col tw-rounded-lg tw-bg-gradient-to-r tw-from-slate-700 tw-via-slate-900 tw-to-slate-700 tw-pt-4 tw-pr-4 tw-pl-4 tw-mt-8;
+  }
+}
