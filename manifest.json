@@ -1,0 +1,15 @@
+{
+    "manifest_version": 1,
+    "start_url": ".",
+    "name": "Community Resources: LGBTQIA+ Switzerland",
+    "version": "1.0.0",
+    "description": "Find information about community resources LGBTQIA+ in Switzerland. Health professionals, support groups, discussion groups, organizations, associations, events and more",
+    "background_color": "#111827",
+    "icons": [
+        {
+          "src": "public/assets/icons/logo/maskable-icon--logo-community-resources.png",
+          "sizes": "48x48",
+          "type": "image/png"
+        }
+    ]
+  }
