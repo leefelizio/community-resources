@@ -14,7 +14,7 @@ export const Search = ({ searchFunction }) => {
     }
   };
 
-  console.log("Search render");
+  // console.log("Search render");
 
   return (
     <>

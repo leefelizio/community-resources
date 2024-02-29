@@ -50,7 +50,7 @@ const SearchResultItem = ({ result }) => {
         {title}
       </h2>
 
-      {console.log("tags on resource ", tags)}
+      {/* {console.log("tags on resource ", tags)} */}
       {tags && (
         <div className="tags-container">
           {tags.map((tag, i) => {

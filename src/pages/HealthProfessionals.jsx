@@ -23,11 +23,11 @@ export function HealthProfessionals() {
         ...doc.data(),
       }));
       setResources(resourceSnapshots);
-      console.log("resourceSnapshots", resourceSnapshots);
+      // console.log("resourceSnapshots", resourceSnapshots);
     });
   }, []);
 
-  console.log("resources", resources);
+  // console.log("resources", resources);
 
   const goToSingle = (resourceId, obj) => {
     navigate(`/resource/${resourceId}`, {
