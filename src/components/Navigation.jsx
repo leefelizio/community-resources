@@ -56,7 +56,7 @@ export function Navigation() {
           </div>
           <div
             id="nav-items-ctn"
-            className={`tw-${invisible ? `hidden` : `block`}`}
+            className={invisible ? `tw-hidden` : `tw-block`}
           >
             <div className="tw-mr-6">
               <NavLink to="/" title="Home" className="nav-item">
