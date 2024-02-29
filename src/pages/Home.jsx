@@ -3,16 +3,61 @@ import { Search } from "../components/search/Search";
 import { SearchResult } from "../components/search/SearchResult";
 import { iconActionSizeS } from "../utils/constants";
 import { useNavigate } from "react-router-dom";
-import { collection, onSnapshot, query, where } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  onSnapshot,
+  query,
+  where,
+} from "firebase/firestore";
 import { db } from "../configs/firebaseConfig";
 import { capitalizeFirstLetter } from "../utils/functions";
 
 export function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const iconActionSize = 32;
   const [resources, setResources] = useState([]);
   const navigate = useNavigate();
+
+  const fetchSearchResults = async () => {
+    const resourceRef = collection(db, "Resources");
+    try {
+      const snapshot = await getDocs(resourceRef);
+      const documents = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return documents;
+    } catch (error) {
+      console.error("Error fetching search results: ", error);
+      return [];
+    }
+  };
+
+  useEffect(() => {
+    const handleSearch = async () => {
+      const documents = await fetchSearchResults();
+
+      const filteredResults = documents.filter((document) => {
+        const lowerCaseQuery = searchQuery.toLowerCase();
+        return (
+          !searchQuery ||
+          document.title.toLowerCase().includes(lowerCaseQuery) ||
+          document.city.toLowerCase().includes(lowerCaseQuery) ||
+          document.description.toLowerCase().includes(lowerCaseQuery)
+        );
+      });
+      setSearchResults(filteredResults);
+      console.log(filteredResults, "filteredResults");
+    };
+
+    if (!searchQuery) {
+      return undefined;
+    } else {
+      handleSearch();
+      console.log("searchQuery", searchQuery);
+    }
+  }, [searchQuery]);
 
   useEffect(() => {
     const resourceRef = collection(db, "Resources");
@@ -44,14 +89,20 @@ export function Home() {
     setSearchQuery(query);
   };
 
+  console.log("Home render");
+
   return (
     <div
       id="homepage"
       className="bg-grad-orange-washed tw-min-h-screen tw-text-slate-300"
     >
       <div className="page-container">
+        <h2 className="page-title">
+          Search on resources by city, title or description
+        </h2>
+
         <Search searchFunction={handleSearch} />
-        <SearchResult searchResults={searchResults} searchQuery={searchQuery} />
+        <SearchResult searchResults={searchResults} />
 
         <section className="last-added">
           <h2 className="last-added-title">Last added on Health</h2>

@@ -1,17 +1,20 @@
 import { useState } from "react";
 
 export const Search = ({ searchFunction }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = () => {
+    const searchTerm = document.querySelector("#input-search").value;
     searchFunction(searchTerm);
   };
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      searchFunction(searchTerm);
+      handleSearch();
     }
   };
+
+  console.log("Search render");
 
   return (
     <>
@@ -19,8 +22,6 @@ export const Search = ({ searchFunction }) => {
         <input
           id="input-search"
           type="search"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder="Search on resources by city, title or description"
           aria-label="Search"

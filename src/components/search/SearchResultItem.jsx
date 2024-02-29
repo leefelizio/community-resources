@@ -6,18 +6,6 @@ import ResourcesQuickActions from "../resources/ResourcesQuickActions";
 const SearchResultItem = ({ result }) => {
   const navigate = useNavigate();
   const iconActionSize = 32;
-  // const title = result.title;
-  // const tags = result.tags;
-  // const address = result.address;
-  // const city = result.city;
-  // const description = result.description;
-  // const email = result.email;
-  // const imgUrl = result.imgUrl;
-  // const link = result.link;
-  // const openFromTime = result.openFromTime;
-  // const openToTime = result.openToTime;
-  // // const phone = result.phone
-  // const googleMaps = result.googleMaps;
   const {
     title,
     tags,
