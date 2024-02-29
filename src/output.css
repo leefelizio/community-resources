@@ -581,16 +581,6 @@ nav {
 
 /* Header */
 
-/* .logo-text {
-    @apply tw-font-semibold tw-my-0 tw-tracking-tight tw-pl-2;
-  }
-  h1.logo-text {
-    @apply tw-text-xs;
-  }
-  h2.logo-text {
-    @apply tw-text-sm;
-  } */
-
 #nav-items-ctn {
   margin-right: 1.5rem;
   width: 100%;
@@ -633,6 +623,11 @@ nav {
     margin-top: 0px;
     display: inline-block;
   }
+}
+
+.nav-item.active {
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
 /* General */
@@ -700,9 +695,10 @@ nav {
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-  padding: 0.5rem;
+  padding: 1rem;
+  font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 
 #input-search::-moz-placeholder {
@@ -826,13 +822,20 @@ nav {
 }
 
 .resource-item {
-  margin-bottom: 2rem;
+  margin: 0px;
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0px;
+}
+
+@media (min-width: 640px) {
+  .resource-item {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .resource-item .resource-clickable-title,
@@ -849,26 +852,31 @@ nav {
 .tags-container {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  display: flex;
   width: 100%;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .resource-tag-item.bg-grad-purple {
   margin-top: 0.5rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
 @media (min-width: 640px) {
   .resource-tag-item.bg-grad-purple {
+    margin-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -876,26 +884,49 @@ nav {
 
 .resource-info-details-ctn {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .resource-info-details-ctn {
+    flex-direction: row;
+  }
 }
 
 .list-info {
-  margin-top: 1.5rem;
-  margin-right: 1rem;
-  width: 41.666667%;
-  padding-right: 1rem;
-  padding-bottom: 1.5rem;
+  margin: 0px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0px;
+}
+
+@media (min-width: 640px) {
+  .list-info {
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    width: 41.666667%;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 .description-and-actions {
-  margin-left: 1rem;
+  margin: 0px;
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-left: 1rem;
+  padding: 0px;
+}
+
+@media (min-width: 640px) {
+  .description-and-actions {
+    margin-left: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 .description-and-actions p {
@@ -914,9 +945,15 @@ nav {
 .resources-quick-info {
   margin-bottom: 1rem;
   display: flex;
-  width: 100%;
+  width: 50%;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .resources-quick-info {
+    width: 100%;
+  }
 }
 
 .resources-quick-info img {
@@ -945,11 +982,11 @@ nav {
 /* Resources Quick Actions */
 
 .resources-quick-actions {
+  margin-top: 2rem;
   display: flex;
-  width: 50%;
-  max-width: 246px;
+  width: 246px;
   justify-items: center;
-  align-self: flex-end;
+  align-self: center;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -960,6 +997,13 @@ nav {
   --tw-gradient-stops: var(--tw-gradient-from), #64748b var(--tw-gradient-via-position), var(--tw-gradient-to);
   --tw-gradient-to: #94a3b8 var(--tw-gradient-to-position);
   padding-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .resources-quick-actions {
+    margin-top: 0px;
+    align-self: flex-end;
+  }
 }
 
 .resources-quick-actions:hover {
@@ -1025,7 +1069,7 @@ nav {
 
 @media (min-width: 1024px) {
   .tag-page .description-and-actions p {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -1165,6 +1209,10 @@ nav {
 
 .tw-flex {
   display: flex;
+}
+
+.tw-hidden {
+  display: none;
 }
 
 .tw-h-1 {
