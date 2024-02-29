@@ -55,7 +55,7 @@ export function Home() {
       return undefined;
     } else {
       handleSearch();
-      console.log("searchQuery", searchQuery);
+      // console.log("searchQuery", searchQuery);
     }
   }, [searchQuery]);
 
@@ -74,7 +74,6 @@ export function Home() {
       // console.log("resourceSnapshots", resourceSnapshots);
     });
   }, []);
-
   // console.log("resources", resources);
 
   const goToSingle = (resourceId, obj) => {

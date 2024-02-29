@@ -1,8 +1,6 @@
 import { useState } from "react";
 
 export const Search = ({ searchFunction }) => {
-  // const [searchTerm, setSearchTerm] = useState("");
-
   const handleSearch = () => {
     const searchTerm = document.querySelector("#input-search").value;
     searchFunction(searchTerm);
@@ -13,7 +11,6 @@ export const Search = ({ searchFunction }) => {
       handleSearch();
     }
   };
-
   // console.log("Search render");
 
   return (
