@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Search } from "../components/search/Search";
 import { SearchResult } from "../components/search/SearchResult";
-import { iconActionSizeS } from "../utils/constants";
 import { useNavigate } from "react-router-dom";
 import {
   collection,
@@ -97,7 +96,7 @@ export function Home() {
     >
       <div className="page-container">
         <h2 className="page-title">
-          Search on resources by city, title or description
+          Resources for the LGBTQIA+ community in Switzerland
         </h2>
 
         <Search searchFunction={handleSearch} />

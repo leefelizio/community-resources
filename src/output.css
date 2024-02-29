@@ -647,7 +647,13 @@ nav {
 }
 
 .page-container {
-  padding: 2rem;
+  padding: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding: 2rem;
+  }
 }
 
 .page-title {
@@ -822,19 +828,24 @@ nav {
 }
 
 .resource-item {
-  margin: 0px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0px;
+  margin-right: 0px;
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 0px;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0px;
 }
 
 @media (min-width: 640px) {
   .resource-item {
     margin-bottom: 2rem;
     padding-top: 2rem;
-    padding-left: 2rem;
     padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -1091,6 +1102,15 @@ nav {
 
 .single-resource-ctn.single-card {
   border-radius: 0.5rem;
+}
+
+.single-resource-ctn.bg-grad-orange-washed {
+  --tw-gradient-from: #1e293b var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(30 41 59 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(150 112 100 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #967064 var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: #1e293b var(--tw-gradient-to-position);
 }
 
 #homepage .resources-ctn {

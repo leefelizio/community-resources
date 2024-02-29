@@ -1,5 +1,3 @@
-// SingleResource.js
-
 import React from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import { capitalizeFirstLetter } from "../utils/functions";
@@ -9,24 +7,20 @@ import ResourcesQuickActions from "../components/resources/ResourcesQuickActions
 const SingleResource = () => {
   const { id } = useParams();
   const location = useLocation();
-  const iconActionSize = 32;
-  // V2 - TO DO - const createdAt = result.createdAt
-  // V2 - TO DO -
-  // const imgUrl = location.state.imgUrl;
-  // const address = location.state.address;
-  const city = location.state.city;
-  const createdAt = location.state.createdAt;
-  const description = location.state.description;
-  const email = location.state.email;
-  const tags = location.state.tags;
-  const link = location.state.link;
-  const openFromTime = location.state.openFromTime;
-  const openToTime = location.state.openToTime;
-  const phone = location.state.phone;
-  const title = location.state.title;
-  const googleMaps = location.state.googleMaps;
-
-  const { imgUrl, address } = location.state;
+  const {
+    imgUrl,
+    address,
+    city,
+    description,
+    email,
+    tags,
+    link,
+    openFromTime,
+    openToTime,
+    phone,
+    title,
+    googleMaps,
+  } = location.state;
   const result = {
     phone,
     email,
@@ -45,7 +39,7 @@ const SingleResource = () => {
                   const tagItem = tag.replace(/-/g, " ");
                   return (
                     <span
-                      key={randomId}
+                      key={`tag--resId-${id}-${randomId}`}
                       className="resource-tag-item bg-grad-purple"
                     >
                       {capitalizeFirstLetter(tagItem)}

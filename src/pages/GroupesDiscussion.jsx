@@ -100,8 +100,7 @@ export function GroupesDiscussion() {
                       <div className="description-and-actions">
                         <p>{description}</p>
 
-                        {/* QUESTION: How to reutilise component below?
-                        <ResourcesQuickActions result={result} /> */}
+                        {/* <ResourcesQuickActions result={result} /> */}
                         <div className="resources-quick-actions">
                           <Link
                             to={`tel:${phone}`}

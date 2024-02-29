@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const Search = ({ searchFunction }) => {
   const handleSearch = () => {
     const searchTerm = document.querySelector("#input-search").value;

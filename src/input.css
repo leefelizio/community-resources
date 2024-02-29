@@ -33,7 +33,7 @@
 
   /* General */
   .page-container {
-    @apply tw-container tw-p-8;
+    @apply tw-container tw-p-3 sm:tw-p-8;
   }
   .page-title {
     @apply tw-text-gray-900 tw-font-extrabold tw-mb-8;
@@ -76,7 +76,7 @@
 
   /* Resources */
   .resource-item {
-    @apply tw-w-full tw-container tw-flex tw-flex-col tw-m-0 tw-p-0 sm:tw-mb-8 sm:tw-pt-8 sm:tw-pl-8 sm:tw-pr-8;
+    @apply tw-w-full tw-container tw-flex tw-flex-col tw-my-6 tw-mx-0 tw-py-3 tw-pt-3 tw-pb-0 sm:tw-mb-8 sm:tw-pt-8 sm:tw-pr-8 sm:tw-pl-8;
   }
   .resource-item .resource-clickable-title,
   .resource-searched-item .resource-clickable-title {
@@ -160,6 +160,9 @@
   }
   .single-resource-ctn.single-card {
     @apply tw-rounded-lg;
+  }
+  .single-resource-ctn.bg-grad-orange-washed {
+    @apply tw-from-slate-800 tw-via-orange-washed-500 tw-to-slate-800;
   }
 
   #homepage .resources-ctn {

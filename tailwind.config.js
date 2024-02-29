@@ -18,11 +18,11 @@ module.exports = {
       colors: {
         "gray-subtle": "#576e9f",
         "orange-washed": "#c08e7e",
+        "orange-washed-500": "#967064",
       },
     },
   },
   plugins: [],
 };
 
-// HINT - After changes on this file, re-run the command below to rebuild TW
-// npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+// HINT - After changes on this file without mode: "jit" run "npm run tw"

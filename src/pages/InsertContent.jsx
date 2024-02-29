@@ -1,6 +1,6 @@
 import { Timestamp, addDoc, collection, doc, getDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { db, storage } from "../configs/firebaseConfig";
 
 export function InsertContent() {
