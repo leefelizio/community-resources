@@ -1,7 +1,7 @@
 {
-  "homepage": "https://leefelizio.github.io/community-resources",
   "name": "community-resources",
   "private": true,
+  "homepage": "https://leefelizio.github.io/community-resources/",
   "version": "0.1.0",
   "type": "module",
   "scripts": {

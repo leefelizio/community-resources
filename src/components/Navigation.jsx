@@ -23,7 +23,7 @@ export function Navigation() {
             <img
               alt="Community Resources logo"
               title="Community Resources logo"
-              src="/assets/icons/logo/logo-community-resources.png"
+              src="./assets/icons/logo/logo-community-resources.png"
               width={42}
               height={42}
             />
