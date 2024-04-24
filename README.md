@@ -6,6 +6,7 @@
 I. WHY CREATING SUCH WEB APP 
 
 THE GOAL
+
 To connect resource providers such as health providers like psychologists, psychiatrists, endocrinologists, and also other resource providers like associations, organisations, support groups and community places with the community that need their resources.
 
 The structure of this web app can be used for any kind of community that has their content spread all over the internet, without having a clear place where to find their main resources all together in one place.
