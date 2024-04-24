@@ -1,9 +1,6 @@
-# Community Resources:
+# Community Resources: LGBTQIA+ on Swizerland
 
-## LGBTQIA+ on Swizerland
-
-####
-I. WHY CREATING SUCH WEB APP 
+## I. WHY CREATING SUCH WEB APP 
 
 THE GOAL
 
@@ -57,13 +54,13 @@ Thinking about that, I created some starter categories of resources with profess
 
 The content can be inserted initially in any of those categories.
 
-————————————
+---
 
-#### III. HOW TO MAKE IT HAPPEN - Project flow and planning
+## III. HOW TO MAKE IT HAPPEN - Project flow and planning
 A **TWO WEEK** SPRINT COMPOSED OF THE FOLLOWING TASKS
 
 
-**FIRST WEEK**
+### **FIRST WEEK**
 
 PROJECT SETUP
 - Install NPM
@@ -115,7 +112,7 @@ GOOGLE AUTHENTICATION
 
 
 
-**SECOND WEEK**
+### **SECOND WEEK**
 
 DATA INSERTION
 - Insert around 20 to 30  lines of data in different categories based on excel sheets and lists that I have collected along the years
@@ -150,9 +147,9 @@ FINAL POLISHING AND PROJECT UPLOAD
 PROJECT PRESENTATION
 Present project
 
-————————————
+---
 
-#### IV.  HOW TO MAKE IT HAPPEN - TECHNOLOGIES USED
+## IV.  HOW TO MAKE IT HAPPEN - TECHNOLOGIES USED
 
 The project will be implemented with the technologies that I learned on the Javascript course, except for Tailwind that is a styling of my preference:
 - React and Javascript for development
@@ -160,9 +157,7 @@ The project will be implemented with the technologies that I learned on the Java
 - NPM as the packager manager
 - Tailwind for responsive styling
 
-————————————
-
-#### To create this project I installed:
+### To create this project I installed:
 
 - NPM `npm i`
 - React `npx create-react-app`
