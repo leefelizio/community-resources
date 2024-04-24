@@ -32,7 +32,7 @@ const SingleResource = () => {
       <div className="single-resource-ctn">
         <div className="page-container">
           <div className="resource-item">
-            <h2 className="">{title}</h2>
+            <h2>{title}</h2>
             {tags && (
               <div className="tags-container">
                 {tags.map((tag) => {
