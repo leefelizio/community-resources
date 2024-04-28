@@ -165,3 +165,36 @@ The project will be implemented with the technologies that I learned on the Java
 - Tailwind `npm install -D tailwindcss` and `npx tailwindcss init` and followed [Tailwind instructions](https://tailwindcss.com/docs/guides/create-react-app)
 - Vite `npm create vite@latest`
 - Firebase `npm i firebase`
+
+----
+
+### Screenshots
+
+### MOBILE
+
+##### Search results
+<img width="425" alt="mobile--search-results" src="https://github.com/leefelizio/community-resources/assets/153447494/021900be-8a82-4026-b500-48401961d19d">
+
+##### Single resource
+<img width="430" alt="mobile--single-resource" src="https://github.com/leefelizio/community-resources/assets/153447494/4909584f-6856-40c9-970f-7ed7c152f5d8">
+
+##### Menu Open
+<img width="422" alt="mobile--menu-open" src="https://github.com/leefelizio/community-resources/assets/153447494/8a520bb2-0849-473c-901b-c003664b9422">
+
+
+----
+
+### DESKTOP
+
+##### Search results - searching by title - design option B
+<img width="1580" alt="search-results-design-2" src="https://github.com/leefelizio/community-resources/assets/153447494/117b4ab6-48c1-4835-91ce-530d5a2f1197">
+
+##### Search results - searching by city - design option A
+<img width="1503" alt="search-results" src="https://github.com/leefelizio/community-resources/assets/153447494/18384701-537a-4bb0-ba0f-a89bbee95127">
+
+##### Single resource
+<img width="1475" alt="single-resource" src="https://github.com/leefelizio/community-resources/assets/153447494/e7117a9d-59a0-4c88-97fc-9672cc5fbd3b">
+
+##### Category page
+<img width="1502" alt="category-page" src="https://github.com/leefelizio/community-resources/assets/153447494/f33db9c2-2c18-4653-b2a5-cc7c0170136c">
+
