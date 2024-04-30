@@ -56,6 +56,74 @@ The content can be inserted initially in any of those categories.
 
 ---
 
+## II. WHAT IS IT
+A WEB APP TO SEARCH ON COMMUNITY RESOURCES
+
+The main functionalities are:
+
+* Insert data on Firestore Database through “Insert Data” page
+* Search on inserted data on a searcher bar in “Homepage” page
+* Show results in a list below the searcher bar in the same page
+* Create Google Authentication functionality through Firebase for v2
+* Only see the “Insert Content” and “Logout” navigation items if you’re authenticated with Google
+* Search by tag, location or title
+
+  
+The pages are:
+
+* Homepage - It is a page with the <b>searcher functionality</b>
+* Tag pages - Page dedicated to show all entries on a tag like “Health Professionals”, for example
+* Insert Content - Page with formulary to insert data into Firestore Database - fully functional for v2 (probably CMS needed)
+* Contact - Page dedicated to provide an email where users can contact in case of suggestions
+
+
+The menu items are:
+
+* Homepage page
+* Online Resources page
+* Contact page
+* Insert Content page
+* The list of resources is going to be displayed with the following informations:
+  * Title of the resource
+  * Tags of the resource
+  * Location
+  * Created on the date of ___
+  * Address
+  * Open Hours
+  * URL
+  * Phone
+  * Email
+  * Description
+
+
+
+### Example of search: "Lausanne Psychologist"
+
+### Example of search result for the search “Lausanne Psychologist”:
+
+  <i> <b>Pascal Moret </b> - Psychologist
+  
+  <b>Location:</b> Lausanne
+
+  <b>Address:</b> Rue du Petit-Chêne 22, 1003 Lausanne
+
+  <b>Open hours:</b> Open on weekdays from 09:00 to 18:00
+
+  <b>Contact:</b>
+
+  No website available
+
+  +41 7439837248
+
+  emailexample@gmail.com
+
+  Works with adults and people with more than 16 years old. Speak French and Spanish. Reimbursed by basic insurance. A psychologist experienced in working with gender diverse people
+  being non-binary, transgender or gender non-conforming. 
+
+</i>
+
+---
+
 ## III. HOW TO MAKE IT HAPPEN - Project flow and planning
 A **TWO WEEK** SPRINT COMPOSED OF THE FOLLOWING TASKS
 
