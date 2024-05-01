@@ -225,7 +225,7 @@ The project will be implemented with the technologies that I learned on the Java
 - NPM as the packager manager
 - Tailwind for responsive styling
 
-### To create this project I installed:
+### Installattions
 
 - NPM `npm i`
 - React `npx create-react-app`
